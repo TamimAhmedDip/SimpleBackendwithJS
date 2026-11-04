@@ -4,6 +4,10 @@ const app = express()
 const PORT = 8383
 console.log('hehe')
 
+let data = {
+    name: 'ARU'
+}
+
 //HTTPS Verbs and Routes
 
 //Website endpoints
@@ -19,6 +23,11 @@ app.get('/dashboard', (req, res) => {
 })
 
 //API endpoints
+
+app.get('/api/data', (req, res) => {
+    console.log('I hit an API endpoint', req.method)
+    res.send(data)
+})
 
 
 app.listen(PORT, ()=> console.log(`Server has started on: ${PORT}`))
