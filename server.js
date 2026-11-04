@@ -14,7 +14,12 @@ let data = {
 
 app.get('/', (req, res) => {
     console.log('Yay I hit an endpoint', req.method)
-    res.send('<h1>This is a website</h1>')
+    res.send(`
+        <body style="background:pink; color:blue;">
+            <h1>Data: </h1>
+            <p>${JSON.stringify(data)}</p>
+        </body>
+        `)
 })
 
 app.get('/dashboard', (req, res) => {
