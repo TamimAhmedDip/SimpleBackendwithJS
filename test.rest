@@ -7,3 +7,11 @@ GET http://localhost:8383/dashboard
 
 ### Test GET /api/data
 GET http://localhost:8383/api/data
+
+### Test POST /api/data
+POST http://localhost:8383/api/data
+Content-Type: application/json
+
+{
+    "name": "dipu"
+}
